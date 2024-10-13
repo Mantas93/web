@@ -1,0 +1,14 @@
+.galery {
+    background-color: aqua;
+}
+
+.galery__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.galery__item.selected {
+    border: 5px solid red;
+}
