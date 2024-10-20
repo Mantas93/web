@@ -1,0 +1,84 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff; /* Šviesi fono spalva */
+  border-bottom: 2px solid #ddd; /* Apačios riba */
+}
+
+.logo {
+  font-size: 24px; /* Didelis šriftas logotipui */
+  font-weight: bold; /* Logotipo paryškinimas */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Atstumas tarp nuorodų */
+}
+
+.nav-links a {
+  text-decoration: none; /* Pašalinti pabraukimą */
+  color: #333; /* Nuorodų spalva */
+  font-size: 16px; /* Šriftas nuorodoms */
+}
+
+.nav-links a:hover {
+  color: #007bff; /* Spalva, kai nuoroda užvedama */
+}
+
+.burger-menu {
+  display: none; /* Paslėpti burger meniu dideliuose ekranuose */
+  flex-direction: column; /* Stulpelio išdėstymas */
+  cursor: pointer; /* Rodyti žymeklio pakeitimą */
+}
+
+.burger-menu div {
+  width: 35px; /* Didinamas plotis */
+  height: 5px; /* Didinamas aukštis */
+  background-color: #333; /* Spalva */
+  margin: 4px; /* Atstumas tarp linijų */
+  border-radius: 5px; /* Apvalūs kampai */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Perėjimo efektas */
+}
+
+/* Burger meniu animacija */
+.burger-menu.active div:nth-child(1) {
+  transform: translateY(9px) rotate(45deg); /* Pirmoji linija sukasi ir pakyla */
+}
+
+.burger-menu.active div:nth-child(2) {
+  opacity: 0; /* Antroji linija dingsta */
+}
+
+.burger-menu.active div:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg); /* Trečioji linija sukasi ir nusileidžia */
+}
+
+/* Stiliai mažiems ekranams */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Paslėpti nuorodas dideliuose ekranuose */
+      flex-direction: column; /* Vertikalus išdėstymas nuorodoms */
+      width: 100%; /* Pildymas visą plotį */
+      position: absolute; /* Padėtis */
+      top: 60px; /* Atsitraukimas nuo viršaus */
+      left: 0; /* Išlyginimas su kairiuoju kraštu */
+      background-color: #ffffff; /* Balta fono spalva */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Šešėlis */
+      z-index: 10; /* Užuolaida virš kitų elementų */
+      opacity: 0; /* Pradinis nematomas */
+      transform: translateY(-10px); /* Pradinis pozicijos pokytis */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Perėjimo efektas */
+  }
+
+  .nav-links.active {
+      display: flex; /* Rodyti nuorodas, kai aktyvios */
+      opacity: 1; /* Padaryti matomą */
+      transform: translateY(0); /* Grąžinti į pradinę poziciją */
+  }
+
+  .burger-menu {
+      display: flex; /* Rodyti burger meniu mažesniuose ekranuose */
+  }
+}
