@@ -2,7 +2,7 @@ import React from 'react'
 
 const Error = () => {
   return (
-    <div>Fcuk you bitch!!!</div>
+    <div>cio kurwa!!!</div>
   )
 }
 
