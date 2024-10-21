@@ -1,5 +1,5 @@
 import React from 'react';
-import './galery.css';
+import '../css/galery.css';
 
 const GaleryCard = ({ selected, item, setSelected }) => {
     const handleClick = () => {

@@ -1,6 +1,5 @@
-// Footer.js
 import React from 'react';
-import './Footer.css'; // Pridėkite CSS failą, jei reikia
+import '../css/Footer.css';
 
 const Footer = () => {
     return (

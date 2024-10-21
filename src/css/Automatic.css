@@ -1,0 +1,48 @@
+.automatic-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.automatic-title {
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.automatic-image {
+  width: 100%; /* 100% plotis, kad prisitaikytų prie konteinerio */
+  height: auto;
+  border-radius: 5px;
+}
+
+.automatic-description {
+  color: #555;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.automatic-button {
+  background-color: #007bff; /* Mygtuko spalva */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.automatic-button:hover {
+  background-color: #0056b3; /* Spalva užvedus */
+}
+
+.more-info {
+  margin-top: 20px;
+}
+
+.sub-title {
+  margin-top: 20px;
+  color: #444;
+}

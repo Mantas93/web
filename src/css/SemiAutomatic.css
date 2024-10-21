@@ -1,0 +1,59 @@
+.semi-auto-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden; /* Užtikrina, kad paveikslėlis nepersipūtų */
+}
+
+.semi-auto-title {
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.semi-auto-image {
+    width: 50%; /* Užims 50% ekrano pločio dideliuose ekranuose */
+    max-width: 400px; /* Maksimalus plotis 400px */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto; /* Centruoja paveikslėlį */
+}
+
+@media (max-width: 600px) {
+    .semi-auto-image {
+        width: 100%; /* Pilnas plotis ant mažesnių ekranų */
+        max-width: 300px; /* Maksimalus plotis 300px ant mažų ekranų */
+    }
+}
+
+.semi-auto-description {
+    color: #555;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.semi-auto-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.semi-auto-button:hover {
+    background-color: #0056b3;
+}
+
+.more-info {
+    margin-top: 20px;
+}
+
+.sub-title {
+    margin-top: 20px;
+    color: #444;
+}

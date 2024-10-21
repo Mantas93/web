@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './galery.css'
+import '../css/galery.css'
 import GaletyCard from './GaletyCard'
 
 const Galery = () => {
