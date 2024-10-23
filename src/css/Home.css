@@ -1,0 +1,108 @@
+/* Home.css */
+
+html, body {
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.home {
+    flex: 1; 
+    padding: 20px;
+    background-color: #d6d5d5; 
+    overflow: auto; 
+}
+
+h1 {
+    color: #222; 
+    margin-bottom: 20px; 
+}
+
+h2 {
+    color: #444; 
+    margin-top: 40px; 
+    margin-bottom: 10px; 
+}
+
+.transmission-types {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.transmission {
+    width: calc(33.33% - 20px); 
+    margin: 10px; 
+    background-color: #ffffff; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    transition: transform 0.3s; 
+}
+
+.transmission:hover {
+    transform: scale(1.05); 
+}
+
+.transmission-image {
+    width: 150px; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+.transmission-info {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Nuorodų mygtukų stiliai */
+.info-link {
+    display: inline-block; 
+    background-color: #007bff; 
+    color: white; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.info-link:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+p {
+    color: #555; 
+    line-height: 1.6; 
+}
+
+/* Mobiliesiems įrenginiams */
+@media (max-width: 768px) {
+    .transmission {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+    .transmission-image {
+        order: 1; 
+        width: 100px; 
+    }
+
+    .transmission-info {
+        order: 2; 
+    }
+}
+
+/* Stulpelių išdėstymas */
+@media (max-width: 600px) {
+    .transmission {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+}

@@ -1,0 +1,7 @@
+.footer {
+    background-color: #ffffff; /* Fono spalva */
+    text-align: center; /* Centruoti tekstą */
+    padding: 20px; /* Atstumas */
+    width: 100%; /* Užtikrinti, kad jis būtų visu pločiu */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Šešėlis */
+}

@@ -1,30 +1,37 @@
-import './App.css';
-import { BrowserRouter, Switch, Routes, Route, Redirect, Link } from "react-router-dom";
-
+import './css/App.css';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from './pages/Home';
 import Galery from './pages/Galery';
 import About from './pages/About';
 import Error from './pages/Error';
-
-
+import Navbar from './pages/Navbar'; 
+import Footer from './pages/Footer';
+import Manual from './pages/Manual'; 
+import Automatic from './pages/Automatic'; 
+import SemiAutomatic from './pages/SemiAutomatic'; // Pridėtas maršrutas semi-automatinėms pavarų dėžėms
+import CVT from './pages/CVT'; // Pridėtas maršrutas CVT pavarų dėžėms
+import DSG from './pages/DSG'; // Pridėtas maršrutas DSG pavarų dėžėms
+import Electric from './pages/Electric'; // Pridėtas maršrutas elektrinėms pavarų dėžėms
 
 const App = () => {
-
   return (
     <div className="App">
       <BrowserRouter>
-        <nav>
-          <Link to={'/'}  >Home</Link><br />
-          <Link to={'/galery'} >Galery</Link> <br />
-          <Link to={'/about'} >About</Link>
-        </nav>
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/galery" component={Galery} exact />
-          <Route path="/about" component={About} exact />
-          <Route path="/error" component={Error} exact />
-          <Redirect to="/error" component={Error} />
-        </Switch>
+        <Navbar /> 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/galery" element={<Galery />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/manual" element={<Manual />} />
+          <Route path="/automatic" element={<Automatic />} />
+          <Route path="/semi-automatic" element={<SemiAutomatic />} /> {/* Pridėtas maršrutas semi-automatinėms pavarų dėžėms */}
+          <Route path="/cvt" element={<CVT />} /> {/* Pridėtas maršrutas CVT pavarų dėžėms */}
+          <Route path="/dsg" element={<DSG />} /> {/* Pridėtas maršrutas DSG pavarų dėžėms */}
+          <Route path="/electric" element={<Electric />} /> {/* Pridėtas maršrutas elektrinėms pavarų dėžėms */}
+          <Route path="/error" element={<Error />} />
+          <Route path="*" element={<Navigate to="/error" />} />
+        </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
